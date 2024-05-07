@@ -9,14 +9,24 @@ class TodoPage extends StatefulWidget {
 
 class _TodoPageState extends State<TodoPage> {
   TextEditingController myController = TextEditingController();
+
+  void greetUser() {
+    print(myController.text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: TextField(
-          controller: myController,
-        ),
+        body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextField(
+            controller: myController,
+          ),
+          ElevatedButton(onPressed: greetUser, child: Text('Tap'))
+        ],
       ),
-    );
+    ));
   }
 }
