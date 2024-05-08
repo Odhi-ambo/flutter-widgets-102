@@ -23,11 +23,13 @@ class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.amber,
         appBar: AppBar(
+            backgroundColor: Colors.amberAccent,
             title: Text(
-          'Landing Page',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        )),
+              'Landing Page',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
