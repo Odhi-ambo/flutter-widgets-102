@@ -17,16 +17,40 @@ class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+            title: Text(
+          'Landing Page',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )),
         body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextField(
-            controller: myController,
+          child: Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                  controller: myController,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(), hintText: 'message1'),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TextField(
+                  controller: myController,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(), hintText: 'message2'),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                ElevatedButton(
+                  onPressed: greetUser,
+                  child: Text('Tap'),
+                ),
+              ],
+            ),
           ),
-          ElevatedButton(onPressed: greetUser, child: Text('Tap'))
-        ],
-      ),
-    ));
+        ));
   }
 }
