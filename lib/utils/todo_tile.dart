@@ -8,8 +8,11 @@ class TodoTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Container(
+        padding: EdgeInsets.all(24),
         child: Text('code in flutter'),
-        decoration: BoxDecoration(color: Colors.yellowAccent),
+        decoration: BoxDecoration(
+            color: Colors.yellowAccent,
+            borderRadius: BorderRadius.circular(12)),
       ),
     );
   }
