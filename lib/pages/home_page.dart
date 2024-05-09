@@ -18,10 +18,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: [
-          TodoTile(),
-          TodoTile(),
-          TodoTile(),
-          TodoTile(),
+          TodoTile(
+            taskName: 'Code in Flutter',
+            taskCompleted: false,
+            onchanged: (p0) {},
+          ),
         ],
       ),
     );
