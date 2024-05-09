@@ -14,10 +14,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.yellow,
-        title: Text('To Do'),
+        title: Center(child: Text('To Do')),
       ),
       body: ListView(
         children: [
+          TodoTile(),
+          TodoTile(),
+          TodoTile(),
           TodoTile(),
         ],
       ),
