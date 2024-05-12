@@ -22,12 +22,21 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void saveNewTask() {
+    setState(() {
+      toDoList.add([_controller.text, false]);
+    });
+    Navigator.of(context).pop();
+  }
+
   void createNewTask() {
     showDialog(
         context: context,
         builder: (context) {
           return DialogBox(
             controller: _controller,
+            onSave: saveNewTask,
+            onCancel: () => Navigator.of(context).pop,
           );
         });
   }
